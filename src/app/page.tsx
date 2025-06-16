@@ -189,11 +189,36 @@ export default function Home() {
                     {playerData.troops
                       ?.filter(troop => troop.village === 'home' && !troop.name.startsWith('Super'))
                       .map((troop) => (
-                        <div key={troop.name} className="p-3 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
-                          <p className="font-semibold dark:text-white">{troop.name}</p>
+                        <div
+                          key={troop.name}
+                          className={`p-3 rounded-lg transition-all ${
+                            troop.level === troop.maxLevel
+                              ? 'bg-gradient-to-br from-amber-50 to-yellow-100 dark:from-amber-900/40 dark:to-yellow-900/40 border-2 border-yellow-400 shadow-[0_0_15px_rgba(251,191,36,0.3)] dark:shadow-[0_0_15px_rgba(251,191,36,0.2)]'
+                              : 'bg-gray-50 dark:bg-gray-700/50'
+                          }`}
+                        >
+                          <p className={`font-semibold ${
+                            troop.level === troop.maxLevel
+                              ? 'text-yellow-700 dark:text-yellow-300'
+                              : 'dark:text-white'
+                          }`}>
+                            {troop.name}
+                          </p>
                           <div className="flex justify-between mt-2">
-                            <span className="dark:text-gray-300">Level {troop.level}</span>
-                            <span className="text-gray-500 dark:text-gray-400">Max: {troop.maxLevel}</span>
+                            <span className={
+                              troop.level === troop.maxLevel
+                                ? 'text-yellow-600 dark:text-yellow-200 font-semibold'
+                                : 'dark:text-gray-300'
+                            }>
+                              Level {troop.level}
+                            </span>
+                            <span className={
+                              troop.level === troop.maxLevel
+                                ? 'text-yellow-600 dark:text-yellow-200 font-semibold'
+                                : 'text-gray-500 dark:text-gray-400'
+                            }>
+                              Max: {troop.maxLevel}
+                            </span>
                           </div>
                         </div>
                       ))}
@@ -208,11 +233,36 @@ export default function Home() {
                       {playerData.troops
                         ?.filter(troop => troop.name.startsWith('Super'))
                         .map((troop) => (
-                          <div key={troop.name} className="p-3 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
-                            <p className="font-semibold dark:text-white">{troop.name}</p>
+                          <div
+                            key={troop.name}
+                            className={`p-3 rounded-lg transition-all ${
+                              troop.level === troop.maxLevel
+                                ? 'bg-gradient-to-br from-amber-50 to-yellow-100 dark:from-amber-900/40 dark:to-yellow-900/40 border-2 border-yellow-400 shadow-[0_0_15px_rgba(251,191,36,0.3)] dark:shadow-[0_0_15px_rgba(251,191,36,0.2)]'
+                                : 'bg-gray-50 dark:bg-gray-700/50'
+                            }`}
+                          >
+                            <p className={`font-semibold ${
+                              troop.level === troop.maxLevel
+                                ? 'text-yellow-700 dark:text-yellow-300'
+                                : 'dark:text-white'
+                            }`}>
+                              {troop.name}
+                            </p>
                             <div className="flex justify-between mt-2">
-                              <span className="dark:text-gray-300">Level {troop.level}</span>
-                              <span className="text-gray-500 dark:text-gray-400">Max: {troop.maxLevel}</span>
+                              <span className={
+                                troop.level === troop.maxLevel
+                                  ? 'text-yellow-600 dark:text-yellow-200 font-semibold'
+                                  : 'dark:text-gray-300'
+                              }>
+                                Level {troop.level}
+                              </span>
+                              <span className={
+                                troop.level === troop.maxLevel
+                                  ? 'text-yellow-600 dark:text-yellow-200 font-semibold'
+                                  : 'text-gray-500 dark:text-gray-400'
+                              }>
+                                Max: {troop.maxLevel}
+                              </span>
                             </div>
                           </div>
                         ))}
@@ -228,11 +278,36 @@ export default function Home() {
                       {playerData.troops
                         ?.filter(troop => troop.village === 'builderBase')
                         .map((troop) => (
-                          <div key={troop.name} className="p-3 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
-                            <p className="font-semibold dark:text-white">{troop.name}</p>
+                          <div
+                            key={troop.name}
+                            className={`p-3 rounded-lg transition-all ${
+                              troop.level === troop.maxLevel
+                                ? 'bg-gradient-to-br from-amber-50 to-yellow-100 dark:from-amber-900/40 dark:to-yellow-900/40 border-2 border-yellow-400 shadow-[0_0_15px_rgba(251,191,36,0.3)] dark:shadow-[0_0_15px_rgba(251,191,36,0.2)]'
+                                : 'bg-gray-50 dark:bg-gray-700/50'
+                            }`}
+                          >
+                            <p className={`font-semibold ${
+                              troop.level === troop.maxLevel
+                                ? 'text-yellow-700 dark:text-yellow-300'
+                                : 'dark:text-white'
+                            }`}>
+                              {troop.name}
+                            </p>
                             <div className="flex justify-between mt-2">
-                              <span className="dark:text-gray-300">Level {troop.level}</span>
-                              <span className="text-gray-500 dark:text-gray-400">Max: {troop.maxLevel}</span>
+                              <span className={
+                                troop.level === troop.maxLevel
+                                  ? 'text-yellow-600 dark:text-yellow-200 font-semibold'
+                                  : 'dark:text-gray-300'
+                              }>
+                                Level {troop.level}
+                              </span>
+                              <span className={
+                                troop.level === troop.maxLevel
+                                  ? 'text-yellow-600 dark:text-yellow-200 font-semibold'
+                                  : 'text-gray-500 dark:text-gray-400'
+                              }>
+                                Max: {troop.maxLevel}
+                              </span>
                             </div>
                           </div>
                         ))}
@@ -246,11 +321,36 @@ export default function Home() {
                     <h3 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">Heroes</h3>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                       {playerData.heroes.map((hero) => (
-                        <div key={hero.name} className="p-3 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
-                          <p className="font-semibold dark:text-white">{hero.name}</p>
+                        <div
+                          key={hero.name}
+                          className={`p-3 rounded-lg transition-all ${
+                            hero.level === hero.maxLevel
+                              ? 'bg-gradient-to-br from-amber-50 to-yellow-100 dark:from-amber-900/40 dark:to-yellow-900/40 border-2 border-yellow-400 shadow-[0_0_15px_rgba(251,191,36,0.3)] dark:shadow-[0_0_15px_rgba(251,191,36,0.2)]'
+                              : 'bg-gray-50 dark:bg-gray-700/50'
+                          }`}
+                        >
+                          <p className={`font-semibold ${
+                            hero.level === hero.maxLevel
+                              ? 'text-yellow-700 dark:text-yellow-300'
+                              : 'dark:text-white'
+                          }`}>
+                            {hero.name}
+                          </p>
                           <div className="flex justify-between mt-2">
-                            <span className="dark:text-gray-300">Level {hero.level}</span>
-                            <span className="text-gray-500 dark:text-gray-400">Max: {hero.maxLevel}</span>
+                            <span className={
+                              hero.level === hero.maxLevel
+                                ? 'text-yellow-600 dark:text-yellow-200 font-semibold'
+                                : 'dark:text-gray-300'
+                            }>
+                              Level {hero.level}
+                            </span>
+                            <span className={
+                              hero.level === hero.maxLevel
+                                ? 'text-yellow-600 dark:text-yellow-200 font-semibold'
+                                : 'text-gray-500 dark:text-gray-400'
+                            }>
+                              Max: {hero.maxLevel}
+                            </span>
                           </div>
                         </div>
                       ))}
@@ -264,11 +364,36 @@ export default function Home() {
                     <h3 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">Spells</h3>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                       {playerData.spells.map((spell) => (
-                        <div key={spell.name} className="p-3 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
-                          <p className="font-semibold dark:text-white">{spell.name}</p>
+                        <div
+                          key={spell.name}
+                          className={`p-3 rounded-lg transition-all ${
+                            spell.level === spell.maxLevel
+                              ? 'bg-gradient-to-br from-amber-50 to-yellow-100 dark:from-amber-900/40 dark:to-yellow-900/40 border-2 border-yellow-400 shadow-[0_0_15px_rgba(251,191,36,0.3)] dark:shadow-[0_0_15px_rgba(251,191,36,0.2)]'
+                              : 'bg-gray-50 dark:bg-gray-700/50'
+                          }`}
+                        >
+                          <p className={`font-semibold ${
+                            spell.level === spell.maxLevel
+                              ? 'text-yellow-700 dark:text-yellow-300'
+                              : 'dark:text-white'
+                          }`}>
+                            {spell.name}
+                          </p>
                           <div className="flex justify-between mt-2">
-                            <span className="dark:text-gray-300">Level {spell.level}</span>
-                            <span className="text-gray-500 dark:text-gray-400">Max: {spell.maxLevel}</span>
+                            <span className={
+                              spell.level === spell.maxLevel
+                                ? 'text-yellow-600 dark:text-yellow-200 font-semibold'
+                                : 'dark:text-gray-300'
+                            }>
+                              Level {spell.level}
+                            </span>
+                            <span className={
+                              spell.level === spell.maxLevel
+                                ? 'text-yellow-600 dark:text-yellow-200 font-semibold'
+                                : 'text-gray-500 dark:text-gray-400'
+                            }>
+                              Max: {spell.maxLevel}
+                            </span>
                           </div>
                         </div>
                       ))}
@@ -280,8 +405,8 @@ export default function Home() {
 
             {activeTab === 'achievements' && (
               <div className="space-y-4">
-                {playerData.achievements?.map((achievement) => (
-                  <div key={achievement.name} className="p-4 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
+                {playerData.achievements?.map((achievement, index) => (
+                  <div key={`${achievement.name}-${achievement.stars}-${achievement.value}-${index}`} className="p-4 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
                     <div className="flex justify-between items-start">
                       <div>
                         <h3 className="font-semibold dark:text-white">{achievement.name}</h3>
